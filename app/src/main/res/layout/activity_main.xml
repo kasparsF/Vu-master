@@ -31,41 +31,27 @@
             android:paddingTop="@dimen/activity_vertical_margin"
             tools:context="com.example.uberv.vugraph2.MainActivity">
 
+            <ImageView
+                android:id="@+id/imageRotate"
+                android:scaleType="fitStart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/tutorial" />
+
             <TextView
+                android:text="Augmented reality (AR) is a live direct or indirect view of a physical, real-world environment whose elements are augmented (or supplemented) by computer-generated sensory input such as sound, video, graphics or GPS data. "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:id="@+id/textView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                android:text="TextView"/>
+                android:textSize="18sp"
+                android:textAllCaps="true"
+                android:textAlignment="center"
+                android:layout_marginBottom="15dp"
+                android:lineSpacingExtra="8sp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true" />
 
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignStart="@+id/textView"
-                android:layout_below="@+id/textView"
-                android:layout_marginTop="15dp"
-                android:text="TextView"/>
-
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignStart="@+id/textView2"
-                android:layout_below="@+id/textView2"
-                android:layout_marginTop="13dp"
-                android:text="TextView"/>
-
-            <TextView
-                android:id="@+id/textView4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true"
-                android:text="Logged In! GG"
-                android:textSize="36sp"
-                android:textStyle="normal|bold"/>
         </RelativeLayout>
     </LinearLayout>
 
@@ -76,7 +62,7 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:background="@android:color/white"
+        android:background="#ededed"
         app:headerLayout="@layout/navigation_header"
         app:menu="@menu/drawer_view"/>
 </android.support.v4.widget.DrawerLayout>

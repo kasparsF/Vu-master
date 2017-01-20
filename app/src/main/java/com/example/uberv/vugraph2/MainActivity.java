@@ -34,9 +34,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        usernameTv = (TextView)findViewById(R.id.textView);
-        emailTv = (TextView)findViewById(R.id.textView2);
-        accessTokenTv = (TextView)findViewById(R.id.textView3);
+//        usernameTv = (TextView)findViewById(R.id.textView);
+//        emailTv = (TextView)findViewById(R.id.textView2);
+//        accessTokenTv = (TextView)findViewById(R.id.textView3);
         toolbar = (Toolbar)findViewById(R.id.toolbar);
         drawer = (DrawerLayout)findViewById(R.id.drawer_layout);
         nvDrawer = (NavigationView)findViewById(R.id.nvView);
@@ -44,9 +44,9 @@ public class MainActivity extends AppCompatActivity {
         currentUser = PreferencesUtils.getCurrentUser();
         populateDrawerHeader(currentUser);
 
-        usernameTv.setText(currentUser.getUsername());
-        emailTv.setText(currentUser.getEmail());
-        accessTokenTv.setText(currentUser.getAccessToken());
+//        usernameTv.setText(currentUser.getUsername());
+//        emailTv.setText(currentUser.getEmail());
+//        accessTokenTv.setText(currentUser.getAccessToken());
 
         setSupportActionBar(toolbar);
 
@@ -68,16 +68,15 @@ public class MainActivity extends AppCompatActivity {
                     public boolean onNavigationItemSelected(MenuItem menuItem) {
                         switch(menuItem.getItemId()) {
                             case R.id.nav_first_fragment:
-                                Toast.makeText(MainActivity.this, "first fragment", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(MainActivity.this, "AR", Toast.LENGTH_SHORT).show();
                                 break;
                             case R.id.nav_second_fragment:
-                                Toast.makeText(MainActivity.this, "second fragment", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(MainActivity.this, "Profile", Toast.LENGTH_SHORT).show();
                                 break;
                             case R.id.nav_third_fragment:
-                                Toast.makeText(MainActivity.this, "third fragment", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(MainActivity.this, "Settings", Toast.LENGTH_SHORT).show();
                                 break;
                             case R.id.nav_logout:
-                                Toast.makeText(MainActivity.this, "Logging out", Toast.LENGTH_SHORT).show();
                                 // 1 delete from preferences
                                 PreferencesUtils.remove(PreferencesUtils.CURRENT_USER);
                                 // 2 revoke tokens from ApiGee

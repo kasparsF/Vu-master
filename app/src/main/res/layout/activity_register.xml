@@ -1,68 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/bg_register"
     android:fillViewport="true"
-    android:id="@+id/root_layout"
+    android:orientation="vertical"
     android:padding="10dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+
+        <ImageView
+            android:id="@+id/activity_logo_label"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:paddingTop="20dp"
+            android:src="@drawable/ar" />
+
+
         <LinearLayout
+            android:id="@+id/detail_container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/detail_container"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/activity_logo_label"
+            android:layout_centerVertical="true"
+            android:orientation="vertical"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
-            android:orientation="vertical"
-            android:layout_centerVertical="true"
-
-            android:layout_alignParentStart="true">
+            android:paddingTop="15dp">
 
             <EditText
-                android:visibility="gone"
-                android:id="@+id/usernameEt"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:background="@color/input_register_bg"
-                android:hint="@string/hint_username"
-                android:inputType="text"
-                android:maxLines="1"
-                android:padding="10dp"
-                android:textColor="@color/input_register"
-                android:textColorHint="@color/input_register_hint"/>
-
-            <EditText
-                android:visibility="gone"
                 android:id="@+id/fullnameEt"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
-                android:background="@color/input_register_bg"
+                android:background="@drawable/rounded_text"
                 android:hint="@string/hint_fullname"
                 android:inputType="textCapWords|textPersonName"
                 android:maxLines="1"
                 android:padding="10dp"
                 android:textColor="@color/input_register"
-                android:textColorHint="@color/input_register_hint"/>
+                android:textColorHint="@color/input_register_hint"
+                android:visibility="gone" />
+
+
+            <EditText
+                android:id="@+id/usernameEt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/rounded_text"
+                android:hint="@string/hint_username"
+                android:inputType="text"
+                android:maxLines="1"
+                android:padding="10dp"
+                android:textColor="@color/input_register"
+                android:textColorHint="@color/input_register_hint"
+                android:visibility="gone" />
+
 
             <EditText
                 android:id="@+id/emailEt"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
-                android:background="@color/input_register_bg"
+                android:background="@drawable/rounded_text"
                 android:hint="@string/hint_email"
                 android:inputType="textEmailAddress"
-                android:padding="10dp"
                 android:maxLines="1"
+                android:padding="10dp"
                 android:textColor="@color/input_register"
                 android:textColorHint="@color/input_register_hint" />
 
@@ -71,81 +84,72 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
-                android:background="@color/input_register_bg"
+                android:background="@drawable/rounded_text"
                 android:hint="@string/hint_password"
                 android:inputType="textPassword"
-                android:padding="10dp"
                 android:maxLines="1"
                 android:nextFocusForward="@+id/btnLoginRegister"
+                android:padding="10dp"
                 android:textColor="@color/input_register"
                 android:textColorHint="@color/input_register_hint" />
 
 
             <ProgressBar
-                android:visibility="gone"
                 android:id="@+id/progressBar"
                 style="?android:attr/progressBarStyleHorizontal"
-                android:indeterminateOnly="true"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:indeterminateOnly="true"
+                android:visibility="gone" />
 
             <Button
-                android:visibility="visible"
                 android:id="@+id/btnLogin"
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="6dp"
-                android:background="#ea4c88"
+                android:background="@drawable/rounded_button"
                 android:text="@string/btn_login"
-                android:textColor="@color/white" />
+                android:textColor="@color/black"
+                android:visibility="visible" />
 
             <Button
-                android:visibility="gone"
                 android:id="@+id/btnRegister"
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="6dp"
-                android:background="#ea4c88"
+                android:background="@drawable/rounded_button"
                 android:text="@string/btn_register"
-                android:textColor="@color/white" />
+                android:textColor="@color/black"
+                android:visibility="gone" />
 
             <!-- Link to Login Screen -->
 
             <Button
                 android:id="@+id/btnLinkToRegisterScreen"
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="40dip"
+                android:layout_marginTop="20dip"
                 android:background="@null"
                 android:text="@string/btn_link_to_register"
                 android:textAllCaps="false"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="15dp" />
+
             <Button
-                android:visibility="gone"
                 android:id="@+id/btnLinkToLoginScreen"
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="40dip"
+                android:layout_marginTop="20dip"
                 android:background="@null"
                 android:text="@string/btn_link_to_login"
                 android:textAllCaps="false"
-                android:textColor="@color/white"
-                android:textSize="15dp" />
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                android:visibility="gone" />
 
         </LinearLayout>
 
-        <TextView
-            android:text="VuGraph"
-            android:transitionName="logo"
-            android:textSize="36sp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/loading_activity_logo_label"
-            android:textStyle="normal|bold"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="54dp"/>
+
     </RelativeLayout>
 
 </ScrollView>
