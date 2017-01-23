@@ -129,7 +129,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             View focusView=null;
             if(!ValidationHelper.isPasswordValid(password)){
                 focusView=passwordEt;
-                passwordEt.setError("Password must contain between 6 and 20 characters!");
+                passwordEt.setError("Password must contain between 6-20 characters!");
             }
             if(!ValidationHelper.isEmailValid(email)){
                 focusView=emailEt;
@@ -172,7 +172,6 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                             //currentUser.setExpiresAt(apiResponse);
                             PreferencesUtils.setCurrentUser(currentUser);
                             VuGraphUser testUser = PreferencesUtils.getCurrentUser();
-                            Toast.makeText(RegisterActivity.this, testUser.toString(), Toast.LENGTH_SHORT).show();
 
 
                             // navigate to the main activity
@@ -206,8 +205,8 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             // validate input
             View focusView=null;
             if(!ValidationHelper.isUsernameValid(username)){
-                focusView=usernameEt;
-                usernameEt.setError("Username must containt between 6 and 20 characters or digits!");
+                    focusView=usernameEt;
+                usernameEt.setError("must containt between 6 and 20 characters!");
             }
             if(!ValidationHelper.isFullnameValid(fullname)){
                 focusView=fullnameEt;
